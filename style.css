@@ -13,10 +13,39 @@ h1, h2, h3, h4 {
   line-height: 30px;
 }
 
+#right h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  text-transform: lowercase;
+}
+
+#right ul {
+  list-style: none;
+  padding: 0;
+}
+
+#right li {
+  padding-left: 2em;
+}
+#right li:before {
+  content: "\f178"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  font-size: 0.8em;
+  display: inline-block;
+  margin-left: -2em; /* same as padding-left set on li */
+  width: 2em; /* same as padding-left set on li */
+}
+
+h3 {
+  text-shadow: -7px 7px #F4FF52;
+}
+
 h1 {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-family: 'Open Sans', sans-serif;
+  text-transform: lowercase;
+  color: black;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: -7px 7px #F4FF52;
 }
 
 a {
@@ -54,6 +83,10 @@ table {
   padding-left: 0px;
 }
 
+.list-inline a {
+  transition: all 0.2s ease;
+}
+
 .list-inline a:hover {
   color: black;
   text-decoration: none;
@@ -76,12 +109,13 @@ table {
   text-decoration: none;
   margin-top: 10;
   display: inline-block;
-  box-shadow:  rgba(0,0,0,0.2) 0 6px 18px;
-  transition: box-shadow 0.2s;
+  box-shadow: rgba(0,0,0,0.2) 0 6px 18px;
+  transition: all 0.2s ease;
 }
 
 #btn-blue:hover {
   box-shadow:  rgba(0,0,0,0.4) 0 6px 18px;
+  background-color: black;
 }
 
 .img-round {
@@ -96,10 +130,30 @@ td {
   padding: 5px;
 }
 
-td img {
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
+.projects {
+  display: flex;
+}
 
+.project {
+  flex-grow: 1;
+  height: 70px;
+  position: relative;
+}
+
+.square-yellow {
+  background-color: #F4FF52;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.project-caption {
+  position: absolute;
+  font-weight: bolder;
+  color: black;
+  left: 20px;
 }
 
 #sidebar {
@@ -155,5 +209,4 @@ td img {
 em {
   background-color: yellow;
   font-style: normal;
-  font-weight: 700;
 }
